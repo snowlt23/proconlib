@@ -1,13 +1,14 @@
 
 #ifdef LOCAL
-  #define debug_echo(expr) cout << expr;
+    #define debug_echo(expr) cout << expr;
 #else
-  #define debug_echo(expr)
+    #define debug_echo(expr)
 #endif
 
 #define rep(i, n) for (int i = 0; i < n; i++)
 
 #include <iostream>
+#include <cmath>
 #include <string>
 #include <vector>
 #include <set>
@@ -43,10 +44,10 @@ ostream& operator <<(ostream& out, const pair<A, B>& p) {
     return out;
 }
 template<class K, class V>
-ostream& operator <<(ostream& out, const map<K, V>& m) {
+ostream& operator <<(ostream& out, const map<K, V>& s) {
     out << "{";
     bool isfirst = false;
-    for (const auto& e : m) {
+    for (const auto& e : s) {
         out << (isfirst ? ", " : "") << e;
         isfirst = true;
     }
